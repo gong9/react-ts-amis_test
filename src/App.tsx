@@ -1,8 +1,6 @@
 import React from 'react';
 
 import 'amis/lib/themes/default.css';
-// 或 import 'amis/lib/themes/cxd.css';
-// 或 import 'amis/lib/themes/dark.css';
 
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
@@ -10,6 +8,8 @@ import copy from 'copy-to-clipboard';
 import { render as renderAmis } from 'amis';
 import { alert, confirm } from 'amis/lib/components/Alert';
 import { toast } from 'amis/lib/components/Toast';
+import './custom/Test01'
+
 
 // amis 环境配置
 const env = {
@@ -17,7 +17,7 @@ const env = {
   fetcher: ({
     url, // 接口地址
     method, // 请求方法 get、post、put、delete
-    data, // 请求数据
+    data, // 请求数据·
     responseType,
     config, // 其他配置
     headers, // 请求头
@@ -62,39 +62,6 @@ const env = {
     toast.success('内容已复制到粘贴板');
   },
 
-  // 后面这些接口可以不用实现
-
-  // 默认是地址跳转
-  // jumpTo: (
-  //   location: string /*目标地址*/,
-  //   action: any /* action对象*/
-  // ) => {
-  //   // 用来实现页面跳转, actionType:link、url 都会进来。
-  // },
-
-  // updateLocation: (
-  //   location: string /*目标地址*/,
-  //   replace: boolean /*是replace，还是push？*/
-  // ) => {
-  //   // 地址替换，跟 jumpTo 类似
-  // },
-
-  // isCurrentUrl: (
-  //   url: string /*url地址*/,
-  // ) => {
-  //   // 用来判断是否目标地址当前地址
-  // },
-
-  // notify: (
-  //   type: 'error' | 'success' /**/,
-  //   msg: string /*提示内容*/
-  // ) => {
-  //   toast[type]
-  //     ? toast[type](msg, type === 'error' ? '系统错误' : '系统消息')
-  //     : console.warn('[Notify]', type, msg);
-  // },
-  // alert,
-  // confirm,
 };
 
 class AMISComponent extends React.Component<any, any> {
@@ -102,10 +69,16 @@ class AMISComponent extends React.Component<any, any> {
     return renderAmis(
       // 这里是 amis 的 Json 配置。
       {
-        type: 'page',
-        body: {
-          'hello word'
-        },
+        "type": "page",
+        "title": "录音组件",
+        "body": {
+          "type": "record",
+          "url": 'www.baidu.com',
+          "sampleBit": 16,
+          "sampleRate": 16000,
+          "numChannel": 1
+
+        }
       },
       {
         // props...
