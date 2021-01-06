@@ -19,10 +19,10 @@ var axios_1 = require("axios");
 var copy_to_clipboard_1 = require("copy-to-clipboard");
 var amis_1 = require("amis");
 var Toast_1 = require("amis/lib/components/Toast");
-require("./custom/Test01");
+require("./custom/Record");
+require("./custom/Emoji");
 // amis 环境配置
 var env = {
-    // 下面三个接口必须实现
     fetcher: function (_a) {
         var url = _a.url, // 接口地址
         method = _a.method, // 请求方法 get、post、put、delete
@@ -68,18 +68,21 @@ var AMISComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     AMISComponent.prototype.render = function () {
-        return amis_1.render(
-        // 这里是 amis 的 Json 配置。
-        {
+        return amis_1.render({
             "type": "page",
             "title": "录音组件",
-            "body": {
-                "type": "record",
-                "url": 'www.baidu.com',
-                "sampleBit": 16,
-                "sampleRate": 16000,
-                "numChannel": 1
-            }
+            "body": [
+                {
+                    "type": "record",
+                    "url": 'www.baidu.com',
+                    "sampleBit": 16,
+                    "sampleRate": 16000,
+                    "numChannel": 1
+                },
+                {
+                    type: "enoji"
+                }
+            ]
         }, {
         // props...
         }, env);

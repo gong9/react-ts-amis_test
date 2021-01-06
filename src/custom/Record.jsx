@@ -3,15 +3,17 @@ import { Renderer } from 'amis';
 import Recorder from 'js-audio-recorder';
 import lamejs from 'lamejs'
 
+import './Record.css'
+
 /**
  *  录音组件
  * 要接收哪些参数呢？
  * 1. 采样率
  * 2. 采样位数
  * 3. 声道
- * 
  * 4. 要上传的地址
- * 5. 
+ * 
+ * 
  * 
  * 
  * 要实现的功能
@@ -54,8 +56,6 @@ class Record extends React.Component {
 
   //开始
   start() {
-
-
     if (!recorder || !this.isRecording) {
       if (!recorder) {
         recorder = new Recorder(this.getConfig())
@@ -70,11 +70,9 @@ class Record extends React.Component {
         this.setState({
           duration: params.duration.toFixed(5),
           fileSize: params.fileSize,
-          // vol: params.vol.toFixed(2)
         });
       }
     }
-
   }
 
   // 暂停
@@ -106,34 +104,39 @@ class Record extends React.Component {
     console.log('正在播放');
     recorder.play();
   }
+
   pausePlay() {
     recorder.pausePlay();
   }
+
   resumePlay() {
     recorder.resumePlay();
   }
+
   stopPlay() {
     recorder.stopPlay();
   }
+
   destroy() {
     recorder.destroy().then(function () {
       recorder = null;
     });
   }
+
   downloadPCM() {
     recorder.downloadPCM();
   }
+
   downloadWAV() {
     recorder.downloadWAV();
   }
+
   downloadMP3 = () => {
-
     const mp3Blob = this._convertToMp3(recorder.getWAV());
-
     console.log(mp3Blob);
     recorder.download(mp3Blob, 'recorder', 'mp3');
-
   }
+
   uploading() {
     fetch(this.props.url)
 
@@ -186,6 +189,7 @@ class Record extends React.Component {
 
     return new Blob(buffer, { type: 'audio/mp3' });
   }
+
   render() {
     return (
       <div className="record">

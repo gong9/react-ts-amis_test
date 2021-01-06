@@ -8,12 +8,12 @@ import copy from 'copy-to-clipboard';
 import { render as renderAmis } from 'amis';
 import { alert, confirm } from 'amis/lib/components/Alert';
 import { toast } from 'amis/lib/components/Toast';
-import './custom/Test01'
+import './custom/Record'
+import './custom/Emoji';
 
 
 // amis 环境配置
 const env = {
-  // 下面三个接口必须实现
   fetcher: ({
     url, // 接口地址
     method, // 请求方法 get、post、put、delete
@@ -67,18 +67,21 @@ const env = {
 class AMISComponent extends React.Component<any, any> {
   render() {
     return renderAmis(
-      // 这里是 amis 的 Json 配置。
       {
         "type": "page",
         "title": "录音组件",
-        "body": {
-          "type": "record",
-          "url": 'www.baidu.com',
-          "sampleBit": 16,
-          "sampleRate": 16000,
-          "numChannel": 1
-
-        }
+        "body": [
+          {
+            "type": "record",
+            "url": 'www.baidu.com',
+            "sampleBit": 16,
+            "sampleRate": 16000,
+            "numChannel": 1
+          },
+          {
+            type:"enoji"
+          }
+        ]
       },
       {
         // props...
