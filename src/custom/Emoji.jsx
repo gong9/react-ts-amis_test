@@ -27,7 +27,7 @@ export class Emoji extends React.Component {
         const { clickHandle } = this.props;
         return (
             <div className="emoji">
-                <div className="emoji-picker">
+                <div className="emoji-picker"> 
                     <Picker onEmojiSelected={(emoji)=>{clickHandle(emoji)}} />
                 </div>
             </div>

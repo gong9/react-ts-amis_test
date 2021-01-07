@@ -11,6 +11,7 @@ import { toast } from 'amis/lib/components/Toast';
 import './custom/Record'
 import './custom/Emoji';
 import './custom/Textarea'
+import './custom/NewEmoji'
 
 // amis 环境配置
 const env = {
@@ -79,17 +80,17 @@ class AMISComponent extends React.Component<any, any> {
             "numChannel": 1
           },
           {
-            type: "enoji"
+            type: "new-enoji"
           },
-          {
-            type: "form",
-            controls: [
-              {
-                type: "textarea11",
-                value:"111"
-              }
-            ]
-          }
+          // {
+          //   type: "form",
+          //   controls: [
+          //     {
+          //       type: "textarea11",
+          //       value:"111"
+          //     }
+          //   ]
+          // }
         ]
       },
       {
