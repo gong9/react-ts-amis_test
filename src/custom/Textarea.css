@@ -1,0 +1,42 @@
+.custom-textarea {
+    position: relative;
+    width: 400px;
+    height: 50px;
+}
+
+.custom-textarea-con {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-textarea-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.custom-textarea-icon .icon-luyin {
+    margin-right: 6px;
+}
+
+.custom-textarea-icon .icon-biaoqing {
+    margin-right: 6px;
+}
+
+.custom-textarea-icon .icon-icon- {
+    margin-right: 6px;
+}
+
+.moni {
+    position: absolute;
+    top: -150px;
+    right: -60px;
+    width: 180px;
+    height: 170px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.show {
+    display: none;
+}
