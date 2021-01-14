@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Renderer } from 'amis';
 import { Scrollbars } from 'react-custom-scrollbars';
 import emojiDictionary from '../lib/emojiDictionaries'
+import { PhotoProvider, PhotoConsumer } from 'react-photo-view';
+import { Image } from 'antd'
+import 'react-photo-view/dist/index.css';
 
 import { Item } from 'amis/lib/store/list';
 import './NewEmoji.css'
@@ -38,6 +41,17 @@ class NewEmoji extends React.Component {
                         })
                     }
                 </Scrollbars>
+                {/* <PhotoProvider>
+                    {photoImages.map((item, index) => (
+                        <PhotoConsumer key={index} src={item} intro={item}>
+                            <img src={item} alt="" />
+                        </PhotoConsumer>
+                    ))}
+                </PhotoProvider> */}
+                <Image
+                    width={200}
+                    src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                />
             </div>
         );
     }

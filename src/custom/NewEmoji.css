@@ -1,7 +1,8 @@
 .newemoji {
+    padding: 5px 0 0 5px;
     width: 200px;
-    height: 200px;
-    border: 1px solid red;
+    height: 210px;
+    background-color: bisque;
 }
 
 
@@ -16,4 +17,8 @@
 .pic-img {
     width: 35px;
     height: 35px;
+}
+img{
+    width: 300px;
+    height: 300px;
 }

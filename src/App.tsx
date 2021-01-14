@@ -68,30 +68,86 @@ const env = {
 class AMISComponent extends React.Component<any, any> {
   render() {
     return renderAmis(
+      // {
+      //   "type": "page",
+      //   "title": "录音组件",
+      //   "body": [
+      //     {
+      //       "type": "record",
+      //       "url": 'www.baidu.com',
+      //       "sampleBit": 16,
+      //       "sampleRate": 16000,
+      //       "numChannel": 1
+      //     },
+
+      //   ]
+      // },
       {
         "type": "page",
-        "title": "录音组件",
-        "body": [
-          {
-            "type": "record",
-            "url": 'www.baidu.com',
-            "sampleBit": 16,
-            "sampleRate": 16000,
-            "numChannel": 1
-          },
-          {
-            type: "new-enoji"
-          },
-          // {
-          //   type: "form",
-          //   controls: [
-          //     {
-          //       type: "textarea11",
-          //       value:"111"
-          //     }
-          //   ]
-          // }
-        ]
+        "body": {
+          "type": "crud",
+          "syncLocation": false,
+          "api": "https://houtai.baidu.com/api/sample",
+          "headerToolbar": [
+            "bulkActions"
+          ],
+          "bulkActions": [
+            {
+              "label": "批量删除",
+              "actionType": "ajax",
+              "api": "delete:https://houtai.baidu.com/api/sample/${ids|raw}",
+              "confirmText": "确定要批量删除?"
+            },
+            {
+              "label": "批量修改",
+              "actionType": "dialog",
+              "dialog": {
+                "title": "批量编辑",
+                "body": {
+                  "type": "form",
+                  "api": "https://houtai.baidu.com/api/sample/bulkUpdate2",
+                  "controls": [
+                    {
+                      "type": "hidden",
+                      "name": "ids"
+                    },
+                    {
+                      "type": "text",
+                      "name": "engine",
+                      "label": "Engine"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "columns": [
+            {
+              "name": "id",
+              "label": "ID"
+            },
+            {
+              "name": "engine",
+              "label": "Rendering engine"
+            },
+            {
+              "name": "browser",
+              "label": "Browser"
+            },
+            {
+              "name": "platform",
+              "label": "Platform(s)"
+            },
+            {
+              "name": "version",
+              "label": "Engine version"
+            },
+            {
+              "name": "grade",
+              "label": "CSS grade"
+            }
+          ]
+        }
       },
       {
         // props...

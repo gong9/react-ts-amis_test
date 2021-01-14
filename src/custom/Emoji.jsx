@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Renderer } from 'amis';
-import Picker from '../lib/Picker'
 import './Emoji.css'
 /**
  * 这个组件要接受什么参数呢？
@@ -28,7 +27,6 @@ export class Emoji extends React.Component {
         return (
             <div className="emoji">
                 <div className="emoji-picker"> 
-                    <Picker onEmojiSelected={(emoji)=>{clickHandle(emoji)}} />
                 </div>
             </div>
         )
