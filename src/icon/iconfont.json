@@ -6,6 +6,76 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "649700",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "978322",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "6580255",
+      "name": "去除",
+      "font_class": "quchu",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "18311748",
+      "name": "电 话",
+      "font_class": "dianhua",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "632986",
+      "name": "加号",
+      "font_class": "jiahaocu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "16022353",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e795",
+      "unicode_decimal": 59285
+    },
+    {
+      "icon_id": "814447",
+      "name": "向左",
+      "font_class": "xiangzuo",
+      "unicode": "e6b0",
+      "unicode_decimal": 59056
+    },
+    {
+      "icon_id": "1048876",
+      "name": "旋转",
+      "font_class": "icon_rotate",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "4333438",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "5082606",
+      "name": "向右",
+      "font_class": "xiangyou",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
       "icon_id": "12687349",
       "name": "发送",
       "font_class": "icon-",

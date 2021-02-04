@@ -25,6 +25,7 @@ import './Record.css'
 let recorder = null;
 class Record extends React.Component {
   constructor(props) {
+    console.log(Recorder)
     super(props);
     this.state = {
       sampleBit: props.sampleBit, //采样率

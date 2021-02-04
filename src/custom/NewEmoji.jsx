@@ -2,11 +2,9 @@ import * as React from 'react';
 import { Renderer } from 'amis';
 import { Scrollbars } from 'react-custom-scrollbars';
 import emojiDictionary from '../lib/emojiDictionaries'
-import { PhotoProvider, PhotoConsumer } from 'react-photo-view';
 import { Image } from 'antd'
 import 'react-photo-view/dist/index.css';
 
-import { Item } from 'amis/lib/store/list';
 import './NewEmoji.css'
 
 const newEmojiDictionary = Object.entries(emojiDictionary)
@@ -26,7 +24,7 @@ class NewEmoji extends React.Component {
     }
     render() {
         return (
-            <div className="newemoji">
+            <div  className="newemoji">
                 <Scrollbars
                     style={{ height: '200px' }}
                     autoHide
@@ -34,9 +32,11 @@ class NewEmoji extends React.Component {
                     {
                         newEmojiDictionary.map(item => {
                             return <NewEmojiItem
+
                                 picPath={item[1]}
                                 dataMsg={item[0]}
                                 key={item[0]}
+                                
                             />
                         })
                     }
